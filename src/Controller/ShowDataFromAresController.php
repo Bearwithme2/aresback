@@ -54,11 +54,11 @@ class ShowDataFromAresController extends AbstractController
 				return $this->sendPersistedCompany($companyEntity);
 			}
 			$this->getIcoResponse($content, $companyEntity);
-		} elseif ($content['name'] !== '') {
-
+		} elseif ($content['name'] !== '' && $content['name'] !== NULL) {
+			dump($content);
 			$this->getNameResponse($content);
 		} else {
-			$this->response = ['chyba' => 'spatne vyplnena pole'];
+			$this->response = ['chyba' => 'chyba'];
 		}
 
 		return $this->sendJsonResponse($this->response);
