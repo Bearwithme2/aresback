@@ -15,8 +15,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ShowDataFromAresController extends AbstractController
 {
-	public const SERIALIZER = 'serializer';
-
 	public $response = [];
 
 	private const TAGS_NAME = ['ico', 'ojm', 'jmn', 'S'];
